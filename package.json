@@ -1,0 +1,27 @@
+{
+  "name": "url-shortner-for-15-billion-year",
+  "version": "1.0.0",
+  "description": "This Node.js service shortens URLs by mapping a 64-bit counter to a pseudo-random code. Uniqueness is ensured via a range-based counter, while a custom encoding produces obfuscated strings.",
+  "keywords": [
+    "shortner",
+    "url-shortner",
+    "billion-years",
+    "range-based-counter"
+  ],
+  "license": "ISC",
+  "author": "Shubham Sangle",
+  "type": "module",
+  "main": "shortnerService.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ioredis": "^5.5.0",
+    "mongodb": "^6.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
