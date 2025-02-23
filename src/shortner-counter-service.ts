@@ -2,11 +2,7 @@ import Express, {Request, Response} from 'express'
 
 import {MongoClient} from 'mongodb'
 
-import CONFIG from './db-config'
-
-const {MongoURI} = CONFIG
-
-const mongodb = new MongoClient(MongoURI);
+const mongodb = new MongoClient(process.env.MONGODB_CONNECTION_URI || "");
 
 const PORT = process.env.PORT || 3001
 
