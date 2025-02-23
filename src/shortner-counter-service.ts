@@ -4,7 +4,9 @@ import {MongoClient} from 'mongodb'
 
 import CONFIG from './db-config'
 
-const mongodb = new MongoClient(CONFIG.MongoURI);
+const {MongoURI} = CONFIG
+
+const mongodb = new MongoClient(MongoURI);
 
 const PORT = process.env.PORT || 3001
 
