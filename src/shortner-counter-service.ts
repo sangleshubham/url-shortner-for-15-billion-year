@@ -1,4 +1,4 @@
-import Express from 'express'
+import Express, {Request, Response} from 'express'
 
 const PORT = process.env.PORT || 3001
 
@@ -9,18 +9,15 @@ const app = Express()
 app.use(Express.json())
 
 class CounterHandler {
+    getCounter() : number{
 
-    getCounter(){
-        return 
+        return 1
     }
-
 }
 
 // This API will get a data from the DB based on range and return it. 
-app.get('/get-counter', (req, res) => {
-    res.status(200).send({
-        counter : 1
-    })
+app.post('/get-counter', async (req : Request, res : Response) => {
+
 })
 
 app.listen(PORT, () => {
